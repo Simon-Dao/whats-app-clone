@@ -6,7 +6,7 @@ import {useConversations} from '../contexts/ConversationsContext'
 export default function NewConversationModal({closeModal}) {
 
     const [selectedContactIds, setSelectedContactIds] = useState([])
-    const contacts = useContacts()
+    const {contacts} = useContacts()
     const {createConversation} = useConversations()
 
     function handleSubmit(e) {
@@ -30,7 +30,7 @@ export default function NewConversationModal({closeModal}) {
     return (
         <>
             <Modal.Header closeButton>
-                Create Contact
+                Create Conversation
             </Modal.Header>
 
             <Modal.Body >

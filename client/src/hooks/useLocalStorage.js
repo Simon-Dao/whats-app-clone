@@ -3,7 +3,10 @@ import {useEffect, useState} from 'react'
 const PREFIX = 'whats-app-clone-'
 
 export default function useLocalStorage(key, initialValue) {
+
+    
     const prefixedKey = PREFIX + key
+    //localStorage.removeItem(PREFIX+'contacts')
     const [value, setValue] = useState(()=> {
         
         const jsonValue = localStorage.getItem(prefixedKey)
