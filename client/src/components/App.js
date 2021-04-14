@@ -6,14 +6,14 @@ import Login from './Login'
 
 function App() {
 
-  const [id, setId] = useLocalStorage()
+  const [id, setId] = useLocalStorage('id')
 
   const dashboard = (
     <ContactsProvider>
       <Dashboard id={id}/>
     </ContactsProvider>
   )
-
+  
   return (
     id ? dashboard : <Login onIdSubmit={setId}/>
   );
